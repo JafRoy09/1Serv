@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{ font-size: 3.4em;}
+h2{ font-size: 2.6em;}
+h3{ font-size: 2em;}
+p{ font-size: 1em;}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: blueviolet;
+}
+button:hover{
+    background-color: rgb(211, 163, 255);
+}
+
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+}
+header img{
+    padding: 3px 3px;
+}
+header .logo{
+    margin: 0%;
+    padding: 0px 0px; /*Modificar pixeles para agregar margenes*/
+    font-weight: bold;
+    font-size: 2.1em;
+    color: blueviolet;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 5px;
+}
+header a{
+    padding: 5px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover{
+    color: blueviolet;
+}
+
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient( 0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url("imagenes/fondo\ banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#banner h1{
+    color: white;
+}
+
+#servicios{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+#servicios .container{
+    padding: 100px 10px;
+}
+#servicios h2{
+    margin-top: 0;
+    font-size: 3em;
+}
+#servicios p{
+    display: none;
+}
+#servicios .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 40px 0px;
+    margin: 15px;
+    border-radius: 17px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient( 0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url("imagenes/fondo\ banner.jpg");
+}
+.carta:nth-child(2){
+    background-image: linear-gradient( 0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url("imagenes/fondo\ banner.jpg");
+}
+.carta:nth-child(3){
+    background-image: linear-gradient( 0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url("imagenes/fondo\ banner.jpg");
+}
+
+#cita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: honeydew;
+    color: black;
+    height: 60vh;
+}
+
+footer{
+    background-color: rgb(250, 250, 250);
+}
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 600px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 25px;
+    }
+
+    #servicios .serv{
+        display: flex;
+        justify-content: center;
+    }
+    #servicios .carta{
+        padding: 30px;
+        box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    }
+    #servicios h3{
+        margin-top: 0;
+    }
+    #servicios p{
+        display: block;
+        margin-bottom: 30px;
+        display: flex;
+    }
+
+    #cita h2{
+        font-size: 3em;
+    }
+    #cita button{
+        font-size: 1.4em;
+    }
+    footer .container{
+        justify-content: flex-end;
+    }
+}
